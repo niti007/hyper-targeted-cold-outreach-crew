@@ -1,0 +1,67 @@
+company: DataMantra
+website: https://thedatamantra.com/
+positioning: >
+  DataMantra is an ed-tech platform for data, AI, and finance upskilling, training
+  professionals and teams through hands-on, instructor-led programs with
+  internationally recognized certification.
+tracks:
+  - name: Agentic AI
+    covers: Building autonomous AI agents, agent orchestration, and applied agentic workflows.
+    best_for: Teams and individuals moving beyond basic GenAI usage into building production AI agents.
+  - name: Generative AI
+    covers: LLM fundamentals, prompt engineering, and applied generative AI use cases.
+    best_for: Professionals who need to apply GenAI tools to real business workflows.
+  - name: Machine Learning
+    covers: Supervised/unsupervised learning, model building, and applied ML techniques.
+    best_for: Analysts and engineers moving into predictive modeling roles.
+  - name: Deep Learning
+    covers: Neural networks, deep learning architectures, and applied deep learning projects.
+    best_for: ML practitioners advancing into deep learning specializations.
+  - name: Python
+    covers: Python programming for data analysis, automation, and scripting.
+    best_for: Beginners to data roles and teams standardizing on Python tooling.
+  - name: SQL
+    covers: Query writing, database fundamentals, and data extraction for analysis.
+    best_for: Anyone working with relational data day to day.
+  - name: Tableau
+    covers: Dashboarding, data visualization, and BI storytelling in Tableau.
+    best_for: Analysts and teams needing to communicate data visually.
+  - name: Power BI
+    covers: Dashboarding, DAX, and business intelligence reporting in Power BI.
+    best_for: Teams standardized on the Microsoft BI stack.
+  - name: Excel
+    covers: Advanced Excel for data analysis, modeling, and reporting.
+    best_for: Business teams needing stronger spreadsheet-based analysis skills.
+  - name: Alteryx
+    covers: Data preparation and workflow automation using Alteryx.
+    best_for: Analysts handling repetitive data-prep pipelines.
+  - name: Statistics
+    covers: Applied statistics for data analysis and decision-making.
+    best_for: Anyone needing a rigorous foundation before ML or advanced analytics.
+  - name: Financial Modeling & Valuation
+    covers: Building financial models and company valuation techniques.
+    best_for: Finance professionals and analysts in corporate finance or IB-track roles.
+  - name: Corporate Finance & Financial Analysis
+    covers: Core corporate finance concepts and financial statement analysis.
+    best_for: Finance teams and professionals sharpening fundamentals.
+  - name: Investment Banking
+    covers: IB-specific modeling, deal analysis, and industry practices.
+    best_for: Professionals targeting or working in investment banking roles.
+  - name: AI in Finance
+    covers: Applying AI/ML techniques to financial analysis and decision-making.
+    best_for: Finance professionals wanting to add AI capability to their toolkit.
+  - name: AI-Powered Project Management
+    covers: Using AI tools to plan, track, and manage projects more effectively.
+    best_for: PMs and team leads looking to modernize project delivery.
+proof_points:
+  - "70,000+ students trained across 60+ countries."
+  - "IAF and ISO-approved certifications recognized internationally."
+  - "Expert-led instructors with real industry experience, not just academic trainers."
+  - "Case study: built Tableau dashboards for Decathlon."
+  - "Case study: delivered customer segmentation for Sandro using Power BI and Python."
+  - "Case study: delivery-time analysis for Bolt."
+  - "Alumni placed at PwC, Capgemini, TCS, Cognizant, Barclays, American Express, Unilever, KPMG, and HSBC."
+delivery_formats: >
+  Instructor-led live cohorts, self-paced online modules, and corporate/team training
+  engagements, with hands-on projects and certification on completion.
+contact: tarunsachdeva7997@gmail.com

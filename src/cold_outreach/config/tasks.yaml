@@ -1,0 +1,99 @@
+research_icp_task:
+  description: >
+    Mode: {mode_label} (entity type to find: {entity_type}).
+
+    Industry: {industry}
+    Region: {region}
+    Optional seed hint (a company, person, or lead the user already has in mind
+    — use it to focus your search if provided, otherwise ignore it): {seed_hint}
+
+    Research brief:
+    {research_brief}
+
+    Use these search queries as your starting point, then follow promising
+    results with further searches or by scraping pages for detail:
+    {search_queries}
+
+    Your job is to find ONE specific, real, named prospect matching the entity
+    type above, with a genuine pain signal grounded in live web evidence.
+
+    Hard rules:
+    - The prospect must be a real, named company or person you actually found
+      via search or scraping — never invent one, and never fall back on a
+      well-known example that did not come up in your research.
+    - You must cite at least two pieces of evidence, each a real quote and its
+      real source URL, that support the pain point you report.
+    - If after thorough searching you cannot find at least two solid pieces of
+      evidence for one prospect, report your best partial finding honestly and
+      set confidence to low. Do not stretch weak signals into a confident
+      profile.
+    - Prefer recent sources over old ones when you have a choice.
+  expected_output: >
+    A structured ICP profile with: the prospect's name, entity type, title (if
+    a decision-maker or the person themselves), LinkedIn URL if found,
+    industry, size or seniority, a clearly stated pain point, a list of at
+    least two evidence items (each with quote, source URL, and date if
+    available), and an honest confidence rating.
+  agent: icp_scout
+
+match_offering_task:
+  description: >
+    Here is the DataMantra offering catalogue — the complete, authoritative
+    list of what DataMantra actually sells. You may only reference course
+    tracks and proof points that appear in it:
+
+    {offering_catalogue}
+
+    Using the ICP profile and pain point researched in the previous task,
+    identify the single sharpest angle connecting this prospect's specific
+    pain to one DataMantra offering.
+
+    Hard rules:
+    - matched_offering must be copied verbatim (exact name) from the course
+      tracks listed in the catalogue above — never paraphrased, combined, or
+      invented.
+    - proof_point must be drawn from the proof points listed in the catalogue
+      above, chosen for relevance to this specific prospect's situation.
+    - mechanism must explain the actual causal link between the offering and
+      the pain — not generic marketing language.
+    - what_to_avoid must name specific generic phrases or claims that would
+      weaken this particular angle if used in the email.
+  expected_output: >
+    A structured outreach angle with: the pain restated in one sentence, the
+    verbatim matched offering name, the mechanism connecting it to the pain,
+    a specific proof point from the catalogue, a one-sentence angle summary,
+    and what to avoid.
+  agent: angle_strategist
+  context:
+    - research_icp_task
+
+write_email_task:
+  description: >
+    Tone for this mode: {email_tone}
+    Call-to-action style for this mode: {cta_style}
+
+    Using the researched ICP profile and the outreach angle from the previous
+    tasks, write a cold email to this specific prospect.
+
+    Hard constraints — all must be satisfied exactly:
+    - Exactly 3 sentences in the body, no more, no fewer.
+    - 75 words or fewer total across the 3 sentences.
+    - Never use the phrases "I hope this finds you well", "quick question", or
+      "reaching out", and never use superlatives (e.g. "amazing", "incredible",
+      "best-in-class", "game-changing").
+    - Sentence 1 must state the specific observed detail from the research
+      that proves this email could only have been sent to this one prospect.
+    - Sentence 2 must state the mechanism connecting that pain to the matched
+      DataMantra offering, including the proof point.
+    - Sentence 3 must be a low-friction call to action matching the CTA style
+      above — easy to say yes to, no pressure.
+    - The subject line must be short and specific to this prospect, not
+      generic and not clickbait.
+  expected_output: >
+    A structured cold email with: subject line, sentence_1, sentence_2,
+    sentence_3, a short standalone cta phrase, the full assembled body text,
+    the personalization hook used, and the total word count.
+  agent: email_copywriter
+  context:
+    - research_icp_task
+    - match_offering_task
